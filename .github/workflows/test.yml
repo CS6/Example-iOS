@@ -26,6 +26,14 @@ jobs:
       uses: einaregilsson/build-number@v2
       with:
         token: ${{ secrets.github_token }}
+    - name: Installing Tree
+      run:  brew install tree
+    - name: Showing Tree
+      run: |
+        tree ../ -L 1
+        tree ../../ -L 2
+        tree ../../ -L 3 -d
+        tree -L 4  
     - run: ./Build
     - uses: Apple-Actions/upload-testflight-build@master
       with:
