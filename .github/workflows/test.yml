@@ -34,6 +34,7 @@ jobs:
         tree ../../ -L 2
         tree ../../ -L 3 -d
         tree -L 4  
+        tree 
     - run: ./Build
     - uses: Apple-Actions/upload-testflight-build@master
       with:
